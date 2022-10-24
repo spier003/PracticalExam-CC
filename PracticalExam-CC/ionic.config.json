@@ -1,0 +1,7 @@
+{
+  "name": "PracticalExam-CC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
