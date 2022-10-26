@@ -1,5 +1,6 @@
 *{
     font-family: 'Josefin Sans', sans-serif;
+    --color: white;
 }
 ion-header{
     --ion-background-color: #99B44A;
@@ -49,6 +50,19 @@ ion-card-header .profile img{
     border-radius: 50%;
     border: 2px solid black;
 
+}
+.interests {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.interests ion-card{
+    height: auto;
+    width: auto;
+    margin: 10px 30px;
 }
 
 
