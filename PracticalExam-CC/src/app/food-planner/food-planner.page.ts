@@ -20,6 +20,7 @@ export class FoodPlannerPage {
 
   message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
   name: string;
+  diet: string;
 
   cancel() {
     this.modal.dismiss(null, 'cancel');
@@ -27,6 +28,7 @@ export class FoodPlannerPage {
 
   confirm() {
     this.modal.dismiss(this.name, 'confirm');
+    this.modal.dismiss(this.diet, 'confirm');
   }
 
   onWillDismiss(event: Event) {

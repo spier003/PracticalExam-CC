@@ -108,16 +108,17 @@ To determine which diet is right for you, contact a registered dietitian nutriti
         </ion-item>
 
         <ion-item>
-          <ion-label>Do you follow any specific diet?</ion-label>
-          <ion-select placeholder="" okText="Ok" cancelText="Back">
+          <!-- <ion-select placeholder="" okText="Ok" cancelText="Back">
             <ion-select-option value="no">No</ion-select-option>
             <ion-select-option value="sugar">Low Sugar</ion-select-option>
             <ion-select-option value="fat">Low Fat</ion-select-option>
             <ion-select-option value="gluten">Gluten-free</ion-select-option>
             <ion-select-option value="vegetarian">Vegetarian</ion-select-option>
             <ion-select-option value="vegan">Vegan</ion-select-option>
-            <ion-select-option value="other">Other</ion-select-option>
-          </ion-select>
+            <ion-select-option value="other">Other</ion-select-option> -->
+            <ion-label position="stacked">Do you follow any specific diet?</ion-label>
+          <ion-input type="text" placeholder="Your diet" [(ngModel)]="diet"></ion-input>
+          <!-- </ion-select> -->
         </ion-item>
 
         <ion-item>
@@ -179,9 +180,14 @@ To determine which diet is right for you, contact a registered dietitian nutriti
     </ion-slide>
   </ion-slides>
 </div>
+<!-- 
+FOOD TRACKER and Recommendation -->
+<ion-card>
+RECOMMENDATION
+</ion-card>
 
 <ion-card>
-  asdsa
+  PAST TRANSACTIONS
 </ion-card>
 
 </ion-content>
