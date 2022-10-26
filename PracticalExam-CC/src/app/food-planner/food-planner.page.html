@@ -8,6 +8,11 @@
 </ion-header>
 
 <ion-content>
+
+  <!-- SEARCHBAR -->
+  <ion-searchbar></ion-searchbar>
+
+  <!-- SLIDE -->
   <div class="container">
   <ion-slides>
     <ion-slide>
@@ -85,109 +90,205 @@ To determine which diet is right for you, contact a registered dietitian nutriti
       <ion-card>
       <img src="../../assets/icon/wonder.jpg" />
       <h2>Test yourself</h2>
+      <!-- END OF SLIDE -->
       
+      <!-- MODAL -->
       <ion-button fill="clear" id="open-modal" expand="block">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
       <p>{{ message }}</p>
-  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
-    <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-button (click)="cancel()">Cancel</ion-button>
-          </ion-buttons>
-          <ion-title>Welcome</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding modal">
-        <ion-item>
-          <ion-label position="stacked">Enter your name</ion-label>
-          <ion-input type="text" placeholder="Your name" [(ngModel)]="name"></ion-input>
-        </ion-item>
+        <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button (click)="cancel()">Cancel</ion-button>
+                </ion-buttons>
+                <ion-title>Welcome</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding modal">
+              <ion-item>
+                <ion-label position="stacked">Enter your name</ion-label>
+                <ion-input type="text" placeholder="Your name" [(ngModel)]="name"></ion-input>
+              </ion-item>
 
-        <ion-item>
-          <!-- <ion-select placeholder="" okText="Ok" cancelText="Back">
-            <ion-select-option value="no">No</ion-select-option>
-            <ion-select-option value="sugar">Low Sugar</ion-select-option>
-            <ion-select-option value="fat">Low Fat</ion-select-option>
-            <ion-select-option value="gluten">Gluten-free</ion-select-option>
-            <ion-select-option value="vegetarian">Vegetarian</ion-select-option>
-            <ion-select-option value="vegan">Vegan</ion-select-option>
-            <ion-select-option value="other">Other</ion-select-option> -->
-            <ion-label position="stacked">Do you follow any specific diet?</ion-label>
-          <ion-input type="text" placeholder="Your diet" [(ngModel)]="diet"></ion-input>
-          <!-- </ion-select> -->
-        </ion-item>
+              <ion-item>
+                <!-- <ion-select placeholder="" okText="Ok" cancelText="Back">
+                  <ion-select-option value="no">No</ion-select-option>
+                  <ion-select-option value="sugar">Low Sugar</ion-select-option>
+                  <ion-select-option value="fat">Low Fat</ion-select-option>
+                  <ion-select-option value="gluten">Gluten-free</ion-select-option>
+                  <ion-select-option value="vegetarian">Vegetarian</ion-select-option>
+                  <ion-select-option value="vegan">Vegan</ion-select-option>
+                  <ion-select-option value="other">Other</ion-select-option> -->
+                  <ion-label position="stacked">Do you follow any specific diet?</ion-label>
+                <ion-input type="text" placeholder="Your diet" [(ngModel)]="diet"></ion-input>
+                <!-- </ion-select> -->
+              </ion-item>
 
-        <ion-item>
-          <ion-label>How many portions of fruits and vegetables do you eat per day?</ion-label>
-          <ion-select placeholder="" okText="Ok" cancelText="Back">
-            <ion-select-option value="one">One</ion-select-option>
-            <ion-select-option value="two">Two</ion-select-option>
-            <ion-select-option value="three">Three</ion-select-option>
-            <ion-select-option value="four">Four or more</ion-select-option>
-          </ion-select>
-        </ion-item>
+              <ion-item>
+                <ion-label>How many portions of fruits and vegetables do you eat per day?</ion-label>
+                <ion-select placeholder="" okText="Ok" cancelText="Back">
+                  <ion-select-option value="one">One</ion-select-option>
+                  <ion-select-option value="two">Two</ion-select-option>
+                  <ion-select-option value="three">Three</ion-select-option>
+                  <ion-select-option value="four">Four or more</ion-select-option>
+                </ion-select>
+              </ion-item>
 
-        <ion-item>
-          <ion-label>Do you typically snack outside of meal time?</ion-label>
-          <ion-select placeholder="" okText="Ok" cancelText="Back">
-            <ion-select-option value="yes">Yes</ion-select-option>
-            <ion-select-option value="no">No</ion-select-option>
-          </ion-select>
-        </ion-item>
+              <ion-item>
+                <ion-label>Do you typically snack outside of meal time?</ion-label>
+                <ion-select placeholder="" okText="Ok" cancelText="Back">
+                  <ion-select-option value="yes">Yes</ion-select-option>
+                  <ion-select-option value="no">No</ion-select-option>
+                </ion-select>
+              </ion-item>
 
-        <ion-item>
-          <ion-label>How many days per week do you exercise?</ion-label>
-          <ion-select placeholder="" okText="Ok" cancelText="Back">
-            <ion-select-option value="onew">0-1 Week</ion-select-option>
-            <ion-select-option value="twow">2-3 Week</ion-select-option>
-            <ion-select-option value="fourw">4-5 Week</ion-select-option>
-            <ion-select-option value="never">Never</ion-select-option>
-            <ion-select-option value="once">Once a fortnight</ion-select-option>
-            <ion-select-option value="every">Everyday</ion-select-option>
-          </ion-select>
-        </ion-item>
+              <ion-item>
+                <ion-label>How many days per week do you exercise?</ion-label>
+                <ion-select placeholder="" okText="Ok" cancelText="Back">
+                  <ion-select-option value="onew">0-1 Week</ion-select-option>
+                  <ion-select-option value="twow">2-3 Week</ion-select-option>
+                  <ion-select-option value="fourw">4-5 Week</ion-select-option>
+                  <ion-select-option value="never">Never</ion-select-option>
+                  <ion-select-option value="once">Once a fortnight</ion-select-option>
+                  <ion-select-option value="every">Everyday</ion-select-option>
+                </ion-select>
+              </ion-item>
 
-        <ion-item>
-          <ion-label>Would you mind telling us your age?</ion-label>
-          <ion-select placeholder="" okText="Ok" cancelText="Back">
-            <ion-select-option value="under">Under 18</ion-select-option>
-            <ion-select-option value="eight">18-25</ion-select-option>
-            <ion-select-option value="twenty">26-40</ion-select-option>
-            <ion-select-option value="forty">41-60</ion-select-option>
-            <ion-select-option value="over">Over 60</ion-select-option>
-            <ion-select-option value="rather">I'd rather not say</ion-select-option>
-          </ion-select>
-        </ion-item>
+              <ion-item>
+                <ion-label>Would you mind telling us your age?</ion-label>
+                <ion-select placeholder="" okText="Ok" cancelText="Back">
+                  <ion-select-option value="under">Under 18</ion-select-option>
+                  <ion-select-option value="eight">18-25</ion-select-option>
+                  <ion-select-option value="twenty">26-40</ion-select-option>
+                  <ion-select-option value="forty">41-60</ion-select-option>
+                  <ion-select-option value="over">Over 60</ion-select-option>
+                  <ion-select-option value="rather">I'd rather not say</ion-select-option>
+                </ion-select>
+              </ion-item>
 
-        <ion-item>
-          <ion-label>And finally, how do you identify?</ion-label>
-          <ion-select placeholder="" okText="Ok" cancelText="Back">
-            <ion-select-option value="mal">Male</ion-select-option>
-            <ion-select-option value="fem">Female</ion-select-option>
-            <ion-select-option value="non">Non-binary</ion-select-option>
-            <ion-select-option value="not">I'd rather not say</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-content>
-    </ng-template>
-  </ion-modal>
-      <br><br><br><br>
-    </ion-card>
-    </ion-slide>
-  </ion-slides>
-</div>
+              <ion-item>
+                <ion-label>And finally, how do you identify?</ion-label>
+                <ion-select placeholder="" okText="Ok" cancelText="Back">
+                  <ion-select-option value="mal">Male</ion-select-option>
+                  <ion-select-option value="fem">Female</ion-select-option>
+                  <ion-select-option value="non">Non-binary</ion-select-option>
+                  <ion-select-option value="not">I'd rather not say</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+            <br><br><br><br>
+          </ion-card>
+          </ion-slide>
+        </ion-slides>
+        </div>
+        <!-- END OF MODAL -->
 <!-- 
 FOOD TRACKER and Recommendation -->
-<ion-card>
-RECOMMENDATION
-</ion-card>
 
-<ion-card>
-  PAST TRANSACTIONS
-</ion-card>
+  <ion-grid>
+    <h1>SELECT YOUR CHOICES</h1>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/icon/vegetar.png" alt="">
+        <div class="title">
+        <h2>Vegetarian</h2>
+      </div>
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/icon/vegan.png" alt="">
+        <div class="title">
+        <h2>Vegan</h2>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img src="../../assets/icon/fruits.png" alt="">
+        <div class="title">
+        <h2>Fruits</h2>
+        </div>
+      </ion-col>
+      <ion-col>
+        <img src="../../assets/icon/gluten.png" alt="">
+        <div class="title">
+        <h2>Gluten-free</h2>
+      </div>
+      </ion-col>
+    
+    </ion-row>
+  </ion-grid>
+
+
+
+  <div class="content">
+    <h1>RESTAURANTS</h1>
+    <ion-card>
+      <img src="../../assets/icon/TOCINOWITHTOFUSCRAMBLE.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>The Vegetarian's Kitchen || Vegetarian</ion-card-subtitle>
+        <ion-card-title>Tocino with Tofu Scramble</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="location-outline"></ion-icon>
+        62 Mother Ignacia Ave. Diliman Quezon City, 1103 Metro Manila Philippines
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="../../assets/icon/veggiebiryani.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Little India || Vegetarian</ion-card-subtitle>
+        <ion-card-title>Veggie Biryani</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="location-outline"></ion-icon>
+        24F Malingap St, Teachers Village Diliman Quezon City, 1101 Metro Manila Philippines
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="../../assets/icon/chickenpeasoup.png">
+      <ion-card-header>
+        <ion-card-subtitle>Likha Diwa Sa Gulod || Vegetarian</ion-card-subtitle>
+        <ion-card-title>Chicken Pea Soup</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="location-outline"></ion-icon>
+        1 Lot J Francisco St Krus Na Ligas Quezon City, Metro Manila Philippines
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="../../assets/icon/vegetablerisotto.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Pipino Vegetarian|| Vegetarian</ion-card-subtitle>
+        <ion-card-title>Vegetable Risotto</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="location-outline"></ion-icon>
+        2/F, 39 Malingap St Teachers Vill Quezon City, 1101 Metro Manila Philippines
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card>
+      <img src="../../assets/icon/misuaguisado.jpg">
+      <ion-card-header>
+        <ion-card-subtitle>Daily Veggie N Cafe|| Vegetarian</ion-card-subtitle>
+        <ion-card-title>Misua Guisado</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="location-outline"></ion-icon>
+        114 Sto. Domingo Avenue Quezon City, 1114 Metro Manila Philippines
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 
 </ion-content>
