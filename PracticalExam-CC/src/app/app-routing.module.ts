@@ -39,7 +39,11 @@ const routes: Routes = [
     path: '',
     redirectTo: '/menutab',
     pathMatch: 'full',
-  }
+  },
+  // {
+  //   path: 'helpdesk',
+  //   loadChildren: () => import('./helpdesk/helpdesk.module').then( m => m.HelpdeskPageModule)
+  // }
 ];
 
 @NgModule({

@@ -7,7 +7,25 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- HELP -->
 <ion-content>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light">
+      <img src="../../assets/icon/logohelp.png" alt="">
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light">
+        <ion-icon name="help-outline" (click)="help()"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      
+    </ion-fab-list>
+  </ion-fab>
 
   <!-- PROFILE -->
   <ion-card>
