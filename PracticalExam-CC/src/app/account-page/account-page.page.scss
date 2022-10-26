@@ -13,5 +13,42 @@ ion-title{
     font-size: 20px;
     --color: #404040;
 }
+ion-content{
+    --ion-background-color: #99B44A;
+}
+.container{
+    height: 200px;
+    --ion-background-color: white;
+}
+ion-card {
+    --background: white;
+    --color: black;
+}
+  
+ion-card-title {
+    --color: orange;
+}
+
+ion-card-subtitle {
+    --color: black;
+}
+ion-card-header .cover{
+    height: 100px;
+    width: auto;
+    z-index: -1;
+}
+ion-card-header .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+ion-card-header .profile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+
+}
 
 
