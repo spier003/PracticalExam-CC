@@ -106,6 +106,71 @@ To determine which diet is right for you, contact a registered dietitian nutriti
           <ion-label position="stacked">Enter your name</ion-label>
           <ion-input type="text" placeholder="Your name" [(ngModel)]="name"></ion-input>
         </ion-item>
+
+        <ion-item>
+          <ion-label>Do you follow any specific diet?</ion-label>
+          <ion-select placeholder="" okText="Ok" cancelText="Back">
+            <ion-select-option value="no">No</ion-select-option>
+            <ion-select-option value="sugar">Low Sugar</ion-select-option>
+            <ion-select-option value="fat">Low Fat</ion-select-option>
+            <ion-select-option value="gluten">Gluten-free</ion-select-option>
+            <ion-select-option value="vegetarian">Vegetarian</ion-select-option>
+            <ion-select-option value="vegan">Vegan</ion-select-option>
+            <ion-select-option value="other">Other</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>How many portions of fruits and vegetables do you eat per day?</ion-label>
+          <ion-select placeholder="" okText="Ok" cancelText="Back">
+            <ion-select-option value="one">One</ion-select-option>
+            <ion-select-option value="two">Two</ion-select-option>
+            <ion-select-option value="three">Three</ion-select-option>
+            <ion-select-option value="four">Four or more</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Do you typically snack outside of meal time?</ion-label>
+          <ion-select placeholder="" okText="Ok" cancelText="Back">
+            <ion-select-option value="yes">Yes</ion-select-option>
+            <ion-select-option value="no">No</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>How many days per week do you exercise?</ion-label>
+          <ion-select placeholder="" okText="Ok" cancelText="Back">
+            <ion-select-option value="onew">0-1 Week</ion-select-option>
+            <ion-select-option value="twow">2-3 Week</ion-select-option>
+            <ion-select-option value="fourw">4-5 Week</ion-select-option>
+            <ion-select-option value="never">Never</ion-select-option>
+            <ion-select-option value="once">Once a fortnight</ion-select-option>
+            <ion-select-option value="every">Everyday</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Would you mind telling us your age?</ion-label>
+          <ion-select placeholder="" okText="Ok" cancelText="Back">
+            <ion-select-option value="under">Under 18</ion-select-option>
+            <ion-select-option value="eight">18-25</ion-select-option>
+            <ion-select-option value="twenty">26-40</ion-select-option>
+            <ion-select-option value="forty">41-60</ion-select-option>
+            <ion-select-option value="over">Over 60</ion-select-option>
+            <ion-select-option value="rather">I'd rather not say</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>And finally, how do you identify?</ion-label>
+          <ion-select placeholder="" okText="Ok" cancelText="Back">
+            <ion-select-option value="mal">Male</ion-select-option>
+            <ion-select-option value="fem">Female</ion-select-option>
+            <ion-select-option value="non">Non-binary</ion-select-option>
+            <ion-select-option value="not">I'd rather not say</ion-select-option>
+          </ion-select>
+        </ion-item>
       </ion-content>
     </ng-template>
   </ion-modal>
