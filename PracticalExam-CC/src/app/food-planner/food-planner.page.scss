@@ -56,3 +56,11 @@ ion-card{
   p b {
     color: var(--ion-text-color, #000000);
   }
+
+  //POP-UP FORM
+.modal{
+    --background: white;
+}
+ion-item{
+    --background: white;
+}
