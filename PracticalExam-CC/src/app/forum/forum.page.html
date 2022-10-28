@@ -1,9 +1,32 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>forum</ion-title>
+    <ion-title slot="start">
+      FORUM
+    </ion-title>
+    <img src="../../assets/icon/logooo.png" alt="">
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-segment value="all">
+    <ion-segment-button value="all">
+      All
+    </ion-segment-button>
+    <ion-segment-button value="favorites">
+      Favorites
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- <ion-card>
+    <ion-card-header>
+      <h1>FORUM</h1>
+      <ion-toggle end color=“secondary” checked=“true”></ion-toggle>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>asd</ion-item>
+      <ion-item>asd</ion-item>
+      <ion-item>asd</ion-item>
+    </ion-list>
+  </ion-card> -->
 
 </ion-content>

@@ -30,6 +30,10 @@ const routes: Routes = [
         loadChildren: () => import('../food-planner/food-planner.module').then( m => m.FoodPlannerPageModule)
       },
       {
+        path: 'forum',
+        loadChildren: () => import('../forum/forum.module').then( m => m.ForumPageModule)
+      },
+      {
         path: 'map',
         loadChildren: () => import('../map/map.module').then( m => m.MapPageModule)
       },

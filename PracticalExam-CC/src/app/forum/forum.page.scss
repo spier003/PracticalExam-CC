@@ -1,0 +1,18 @@
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+ion-header{
+    --ion-background-color: #749414;
+}
+ion-toolbar img{
+    height: 70px;
+    width: 70px;
+    float: right;
+}
+ion-title{
+    font-size: 20px;
+    --color: white;
+}
+ion-content{
+    --ion-background-color: #99B44A;
+}
