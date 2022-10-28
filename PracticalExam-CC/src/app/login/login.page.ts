@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class LoginPage {
 
-  SignIn() {
-    alert('Button is clicked')
+  signIn() {
+    alert('Button is clicked');
   }
 
 }

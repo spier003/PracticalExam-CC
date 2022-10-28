@@ -13,6 +13,20 @@ ion-title{
 ion-content{
     --ion-background-color: #99B44A;
 }
+ion-card{
+    margin-top: 30px;
+    padding:70px 40px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+ion-card h4{
+    color: white;
+}
+ion-card h5{
+    color: white;
+    text-align: center; 
+}
+
+
 
 /* CSS */
 .button-70 {
@@ -32,3 +46,9 @@ ion-content{
     -webkit-user-select: none;
     touch-action: manipulation;
   }
+
+  
+
+
+
+  
