@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">
+      Chick'en Fit
+    </ion-title>
+    <img src="../../assets/icon/logooo.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<center><h4 text-center margin-top>Insert your credentials</h4></center>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input type="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+<br>
+  <center><div text-center margin-top>
+    <button class="button-70" role="button">Sign In</button>
+  </div></center>
+</ion-content>
