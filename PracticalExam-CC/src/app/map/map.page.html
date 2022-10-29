@@ -1,15 +1,30 @@
-
-<ion-content [fullscreen]="true">
-  
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title size="large">Map</ion-title>
+    <ion-title slot="start">
+      Food Finder
+    </ion-title>
+    <img src="../../assets/icon/logooo.png" alt="">
   </ion-toolbar>
 
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
   <ion-card>
-    <h2>Find your Restaurant</h2>
-    <img src="../../assets/Valenzuela.png" height="100px">
+    <ion-card-header>
+      <div class="cover">
+        <img src="../../assets/icon/logooo.png" class="logo" alt="">
+      </div>
+      <h1>CHICK'EN FIT</h1>
+    </ion-card-header>
   </ion-card>
 
+  <h3>Find your Restaurant</h3>
+  <div class="map">
+
+    <img src="../../assets/Valenzuela.png">
+  </div>
 
 
 </ion-content>

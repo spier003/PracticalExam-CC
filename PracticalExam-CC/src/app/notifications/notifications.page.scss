@@ -16,8 +16,13 @@ ion-title{
 ion-content{
     --ion-background-color: #99B44A;
 }
-
-
+ion-datetime-button{
+    margin-top: 20px;
+}
+ion-note{
+    margin-left: 10px;
+}
 ion-item{
     --ion-background-color: white;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
 }
