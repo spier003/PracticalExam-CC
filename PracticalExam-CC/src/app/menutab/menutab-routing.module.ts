@@ -48,7 +48,11 @@ const routes: Routes = [
     path: '',
     redirectTo: '/menutab/home',
     pathMatch: 'full',
-  }
+  },
+  {
+    path: 'forum',
+    loadChildren: () => import('../forum/forum.module').then( m => m.ForumPageModule)
+  },
 ];
 
 @NgModule({

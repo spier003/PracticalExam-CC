@@ -31,6 +31,11 @@ const routes: Routes = [
   //   path: 'map',
   //   loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
   // },
+
+  {
+    path: 'forum',
+    loadChildren: () => import('./forum/forum.module').then( m => m.ForumPageModule)
+  },
   {
     path: 'menutab',
     loadChildren: () => import('./menutab/menutab.module').then( m => m.MenutabPageModule)
@@ -39,10 +44,16 @@ const routes: Routes = [
     path: '',
     redirectTo: '/menutab',
     pathMatch: 'full',
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'form',
+    loadChildren: () => import('../app/form/form.module').then( m => m.FormPageModule)
+  },
+
 
   // {
   //   path: 'helpdesk',

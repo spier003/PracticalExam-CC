@@ -1,9 +1,195 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>notifications</ion-title>
+    <ion-title slot="start">
+      Notifications
+    </ion-title>
+    <img src="../../assets/icon/logooo.png" alt="">
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <!-- Date and Time -->
+  <ion-datetime-button datetime="datetime"></ion-datetime-button>
 
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime id="datetime"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+<br>
+  <center><ion-note color="medium">Slide Notification to archive and Delete.</ion-note></center>
+
+<!-- Notif list -->
+
+<ion-list>
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label>New Restaurants has been opened near you!</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label>Food Planner Created Successfully</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      <ion-label>Don't Forget to update your food planner in time.</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label>
+        <h2>Notifications from Dhanmar</h2>
+        <p>Your foodbuddy Dhanmar has updated their planner</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label>You have successfully updated your post.</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      <ion-label>
+        <h2>Login alert</h2>
+        <p>you have logged in unauthorized device. check if it's you</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label>Anniversary Discount Coupon is Available!</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label>
+        <h2>First Time Setup</h2>
+        <p>Let's walk you through to set your Account</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item-options side="start">
+      <ion-item-option color="success" expandable>Archive</ion-item-option>
+    </ion-item-options>
+
+    <ion-item>
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      <ion-label>Don't Forget to update your food planner in time.</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger" expandable>Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  </ion-list>
+  <center><ion-note color="medium">Nothing more to follow.</ion-note></center>
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-undo-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>
