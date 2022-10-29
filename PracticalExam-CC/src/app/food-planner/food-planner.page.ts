@@ -18,7 +18,7 @@ import { OverlayEventDetail } from '@ionic/core/components';
 export class FoodPlannerPage {
   @ViewChild(IonModal) modal: IonModal;
 
-  message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
+  message = 'To test what kind of diet suits you. Try it!';
   name: string;
   diet: string;
 
