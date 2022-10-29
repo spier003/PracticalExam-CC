@@ -7,26 +7,164 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-segment value="all">
-    <ion-segment-button value="all">
-      All
+<ion-content class="ion-padding">
+
+  <ion-segment [(ngModel)]="segment" scrollable>
+    <ion-segment-button class="button-87" role="button" value="first">
+      Forum
     </ion-segment-button>
-    <ion-segment-button value="favorites">
-      Favorites
+    <ion-segment-button class="button-87" role="button"  value="second">
+      Recommendation
     </ion-segment-button>
   </ion-segment>
 
-  <!-- <ion-card>
+
+  <div [ngSwitch]="segment">
+    <ion-card *ngSwitchCase="'first'">
+      <ion-card-header>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../assets/icon/carrot.jpg">
+          </ion-avatar>
+          <ion-item button detail="true" detail-icon="caret-forward-outline">
+            <ion-label>
+              <h3>What are you baking? October 2022</h3>
+              <p>I made a mini-batch of Recipe Tin Eats’ parmesan shortbread crisps (along with a big pot of garden tomato soup).</p>
+            </ion-label>
+          </ion-item>
+        </ion-item>
+        <h5>Comment: </h5>
+        <ion-textarea
+          placeholder="Write a comment..."
+          [clearOnEdit]="true">
+        </ion-textarea>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'first'">
     <ion-card-header>
-      <h1>FORUM</h1>
-      <ion-toggle end color=“secondary” checked=“true”></ion-toggle>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../assets/icon/carrot.jpg">
+        </ion-avatar>
+        <ion-item button detail="true" detail-icon="caret-forward-outline">
+          <ion-label>
+            <h3>Can't Post in Certain Topics</h3>
+            <p>Hi there,
+              I hope I’m not asking a stupid question, but does anyone know why I am not allowed to post under the Regional topics or the Drinks topic?</p>
+          </ion-label>
+        </ion-item>
+      </ion-item>
+      <h5>Comment: </h5>
+      <ion-textarea
+        placeholder="Write a comment..."
+        [clearOnEdit]="true">
+      </ion-textarea>
     </ion-card-header>
-    <ion-list>
-      <ion-item>asd</ion-item>
-      <ion-item>asd</ion-item>
-      <ion-item>asd</ion-item>
-    </ion-list>
-  </ion-card> -->
+  </ion-card>
+
+  <ion-card *ngSwitchCase="'first'">
+    <ion-card-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../assets/icon/carrot.jpg">
+        </ion-avatar>
+        <ion-item button detail="true" detail-icon="caret-forward-outline">
+          <ion-label>
+            <h3>Balance is restored [Mex, PJ Ryan’s; Greater Boston]</h3>
+            <p>Probably Sichuan Gourmet. Mostly the Framingham one, but also Sharon. Have been going for years and years. Remarkably consistent, and fantastic food. Owners know me by name.</p>
+          </ion-label>
+        </ion-item>
+      </ion-item>
+      <h5>Comment: </h5>
+      <ion-textarea
+        placeholder="Write a comment..."
+        [clearOnEdit]="true">
+      </ion-textarea>
+    </ion-card-header>
+  </ion-card>
+
+
+    <ion-card *ngSwitchCase="'second'">
+      <ion-card-header>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../assets/icon/carrot.jpg">
+          </ion-avatar>
+          <ion-item button detail="true" detail-icon="caret-forward-outline">
+            <ion-label>
+              <h3>Balance is restored [Mex, PJ Ryan’s; Greater Boston]</h3>
+              <p>Probably Sichuan Gourmet. Mostly the Framingham one, but also Sharon. Have been going for years and years. Remarkably consistent, and fantastic food. Owners know me by name.</p>
+            </ion-label>
+          </ion-item>
+        </ion-item>
+        <h5>Comment: </h5>
+        <ion-textarea
+          placeholder="Write a comment..."
+          [clearOnEdit]="true">
+        </ion-textarea>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'second'">
+      <ion-card-header>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../assets/icon/carrot.jpg">
+          </ion-avatar>
+          <ion-item button detail="true" detail-icon="caret-forward-outline">
+            <ion-label>
+              <h3>Balance is restored [Mex, PJ Ryan’s; Greater Boston]</h3>
+              <p>Probably Sichuan Gourmet. Mostly the Framingham one, but also Sharon. Have been going for years and years. Remarkably consistent, and fantastic food. Owners know me by name.</p>
+            </ion-label>
+          </ion-item>
+        </ion-item>
+        <h5>Comment: </h5>
+        <ion-textarea
+          placeholder="Write a comment..."
+          [clearOnEdit]="true">
+        </ion-textarea>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'second'">
+      <ion-card-header>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../assets/icon/carrot.jpg">
+          </ion-avatar>
+          <ion-item button detail="true" detail-icon="caret-forward-outline">
+            <ion-label>
+              <h3>Balance is restored [Mex, PJ Ryan’s; Greater Boston]</h3>
+              <p>Probably Sichuan Gourmet. Mostly the Framingham one, but also Sharon. Have been going for years and years. Remarkably consistent, and fantastic food. Owners know me by name.</p>
+            </ion-label>
+          </ion-item>
+        </ion-item>
+        <h5>Comment: </h5>
+        <ion-textarea
+          placeholder="Write a comment..."
+          [clearOnEdit]="true">
+        </ion-textarea>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light">
+      <img src="../../assets/icon/logohelp.png" alt="">
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light">
+        <ion-icon name="star-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 
 </ion-content>
+ 
